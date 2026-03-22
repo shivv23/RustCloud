@@ -3,8 +3,8 @@ use crate::types::llm::{LlmRequest, Message, ModelRef};
 
 #[tokio::test]
 async fn test_vertex_compilation() {
-    let _client = GoogleVertexAI::new("test-project".to_string(), None);
-    let _req = LlmRequest {
+    let client = GoogleVertexAI::new("test-project".to_string(), None);
+    let req = LlmRequest {
         model: ModelRef::Provider("gemini-1.5-flash".to_string()),
         messages: vec![Message {
             role: "user".to_string(),
@@ -14,6 +14,8 @@ async fn test_vertex_compilation() {
         temperature: Some(0.7),
         system_prompt: None,
     };
-    
-    assert!(true);
+
+    std::mem::drop(client);
+    assert_eq!(req.max_tokens, Some(50));
+    assert_eq!(req.messages[0].content, "Hello from Vertex AI");
 }
