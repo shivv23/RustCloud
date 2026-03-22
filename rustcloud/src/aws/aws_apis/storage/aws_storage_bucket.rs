@@ -1,4 +1,4 @@
-#![allow(clippy::result_large_err)]
+#![allow(clippy::result_large_err, clippy::too_many_arguments)]
 
 use aws_sdk_s3::{
     primitives::ByteStream,

@@ -1,3 +1,4 @@
+#![allow(clippy::too_many_arguments, clippy::new_without_default)]
 use crate::gcp::gcp_apis::auth::gcp_auth::retrieve_token;
 use crate::gcp::types::compute::gcp_kubernetes_types::*;
 use reqwest::{header::AUTHORIZATION, Client, Response};

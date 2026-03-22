@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 use crate::gcp::gcp_apis::auth::gcp_auth::retrieve_token;
 use crate::gcp::types::network::gcp_loadbalancer_types::*;
 use chrono::Utc;
