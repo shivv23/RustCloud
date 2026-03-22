@@ -1,3 +1,4 @@
+#![allow(clippy::too_many_arguments, clippy::new_without_default)]
 use reqwest::{header::AUTHORIZATION, Client, Method};
 use serde_json::json;
 use std::collections::HashMap;
