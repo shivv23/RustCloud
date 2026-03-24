@@ -1,6 +1,7 @@
 pub mod errors;
 pub mod traits;
 pub mod types;
+pub mod unified;
 pub mod aws;
 pub mod azure;
 pub mod gcp;
